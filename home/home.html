@@ -1,0 +1,47 @@
+<section data-ng-controller="HomeCtrl" data-ng-init="stats" class="home">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <h1>What is CoinFu?</h1>
+            <p class="lead">CoinFu is a cryptocurrency mining pool for scrypt based coins. We mine the most profitable coins, immediately trade them for bitcoin, and pay you out in bitcoin each day. No signup is required, just put your bitcoin address in the username field of your miner. We are currently in beta and furiously getting more coins online.</p>
+            <hr>
+            <h1>Why CoinFu?</h1>
+            <ul>
+                <li>No signup required</li>
+                <li>Automatic email alerts if any of your machines stop submitting shares</li>
+                <li>Automatic payments to the bitcoin address of your chosing</li>
+                <li>Very low rejection rates</li>
+                <li>Highly available and durable server architecture built on Amazon Web Services</li>
+                <li>Multiple regions, automatically switched to based on latency</li>
+                <li>Variable difficulty for accurate hash rate measurements</li>
+                <li>Transaction fees are paid to miners</li>
+                <li>Pool fee is only 1% during beta (balances are post fee)</li>
+                <li>Rewards are paid out with PPLNS - fair for both occasional and consistent miners</li>
+                <li>Pool uses the Stratum Protocol</li>
+            </ul>
+            <hr>
+            <h1>How to Get Setup</h1>
+            <h4>CGMiner Command Line Example:</h4>
+            <pre>cgminer --scrypt -o stratum+tcp://pool.coinfu.io:3333 -u myrig1_17b2Yu4jmErkcBQrL39QxCXc15WZYokzKQ -p youremail@gmail.com</pre>
+            <p>Set the username of your miner to WORKERNAME_BITCOINADDRESS and set the password to your email address. If a worker stops submitting shares for over 15 minutes, an email will be sent to alert you. You will also receive an email letting you know when your worker comes back online. The worker name and email are optional, but both are required to get email alerts. Do not use "--no-submit-stale" for cgminer as this would prevent cgminer from submitting shares that you would otherwise get credit for.</p>
+            <hr>
+            <h1>Contact Us</h1>
+            <p>Email us at <a href="mailto:support@coinfu.io">support@coinfu.io</a></p>
+            <hr>
+            <h1>FAQ</h1>
+            <dl>
+                <dt>What coins does your pool mine?</dt>
+                <dd>The list of coins the pool considers for mining is always changing. We are always on the lookout for the most profitable coins. Visit our stats page to see what coins we have been mining recently.</dd><br>
+                <dt>When are payouts?</dt>
+                <dd>Payouts are made daily between 8 pm and 11 pm Pacific Time.</dd><br>
+                <dt> How does the email alert work?</dt>
+                <dd>To get email alerts, provide a worker name in front of your bitcoin address separated by an underscore “_”. Additionally put your email address in the password field of your miner. An example username is myrig1_17b2Yu4jmErkcBQrL39QxCXc15WZYokzKQ. If we find that any of your workers have not submitted a share within the last 15 minutes, then we will email you the name of the worker along with the time the last share was submitted.</dd><br>
+                <dt>Where are your servers located?</dt>
+                <dd>We are currently in three regions, Europe, US East and US West with more coming online as demand increases. Pointing your miner at pool.coinfu.io:3333 will automatically route you to the closest server.</dd><br>
+                <dt>What is variable difficulty?</dt>
+                <dd>Mining pools give out work to miners in small chunks of work called shares. Many pools will give out the same size share to all miners regardless of their hash rate. CoinFu detects each miner’s hash rate and continually adjusts the share difficulty so that on average each miner will submit a share every 10 seconds. This enables us to better report hash rate and email alerts for smaller miners. It also keeps larger miners from putting excessive load on the mining pool.</dd><br>
+                <dt>How does CoinFu prevent loss of share data?</dt>
+                <dd>Every share submitted and each found block are first recorded to a messaging service which stores messages redundantly across multiple availability zones. These messages are immediately read into a queue and inserted into the database. Miners will only receive an accept message after their shares have been stored successfully. The database is also replicated across multiple availability zones. Even in the event of a database failure, the message queue will continue to save all work submitted by miners and be processed after the database is restored.</dd><br>
+            </dl>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,52 @@
+<div data-ng-controller="NavCtrl" class="cf-nav" ng-class="showMaxNav ? 'cf-nav-state-max' : 'cf-nav-state-min'">
+    <a href="" class="cf-nav-toggle" ng-click="toggleNav()">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </a>
+
+    <ul>
+        <li class="cf-nav-shortcut">
+            <a ui-sref="home" class="current active">
+                <span class="cf-nav-min">H<i class="fa fa-home"></i></span>
+                <span class="cf-nav-max">Home</span>
+            </a>
+        </li>
+        <li class="cf-nav-shortcut">
+            <a ui-sref="poolStats">
+                <span class="cf-nav-min">P<i class="fa fa-bar-chart-o"></i></span>
+                <span class="cf-nav-max">Pool Stats</span>
+            </a>
+        </li>
+        <li class="cf-nav-shortcut">
+            <a ng-click="openModal()" >
+                <span class="cf-nav-min">M<i class="fa fa-bar-chart-o"></i></span>
+                <span class="cf-nav-max">Miner Stats</span>
+            </a>
+        </li>
+        <li class="cf-nav-shortcut">
+            <a href="http://blog.coinfu.io">
+                <span class="cf-nav-min">B<br><i class="fa fa-book"></i></span>
+                <span class="cf-nav-max">Blog</span>
+            </a>
+        </li>
+        <li class="cf-nav-shortcut">
+            <a href="https://twitter.com/thecoinfu">
+                <span class="cf-nav-min"><i class="fa fa-twitter"></i></span>
+                <span class="cf-nav-max">Twitter</span>
+            </a>
+        </li>
+        <li class="cf-nav-shortcut">
+            <a href="https://plus.google.com/+coinfuiopool">
+                <span class="cf-nav-min"><i class="fa fa-google-plus"></i></span>
+                <span class="cf-nav-max">Google+</span>
+            </a>
+        </li>
+        <li class="cf-nav-shortcut">
+            <a href="http://facebook.com/coinfu">
+                <span class="cf-nav-min"><i class="fa fa-facebook"></i></span>
+                <span class="cf-nav-max">Facebook</span>
+            </a>
+        </li>
+    </ul>
+</div>

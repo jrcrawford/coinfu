@@ -1,0 +1,167 @@
+<div class="row">
+    <div class="col-sm-4 cf-item">
+        <header>
+            <p><span></span>Profitability (BTC/day per MH/s)</p>
+        </header>
+        <div class="content2">
+            <div class="cf-svmc-sparkline">
+                <div class="cf-svmc">
+                    <div class="metric">{{profitability | number:6}}<span>({{dayHours}}h)</span></div>
+                    <div>
+                        <span class="change metric-small" ng-class="profitabilityChange<0 ? 'm-red' : 'm-green'">
+                            <span ng-class="profitabilityChange<0 ? 'arrow-down' : 'arrow-up'"></span><span class="large">{{profitabilityChange*100 | cfPercentBig}}<span class="small">.{{profitabilityChange*100 | cfPercentSmall}}%</span></span>
+                        </span>
+                    </div>
+                </div>
+                <!--<div class="cf-sparkline clearfix">-->
+                <!--<div id="spark-1" class="sparkline"></div>-->
+                <!--<div class="sparkline-value">-->
+                <!--<div class="metric-small">0</div>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+
+        <div class="content2">
+            <div class="cf-svmc-sparkline">
+                <div class="cf-svmc">
+                    <div class="metric">{{profitabilityWeek | number:6}}<span>({{weekHours/24 | number:0}}d)</span></div>
+                    <div class="change metric-small" ng-class="profitabilityChangeWeek<0 ? 'm-red' : 'm-green'">
+                        <div ng-class="profitabilityChangeWeek<0 ? 'arrow-down' : 'arrow-up'"></div>
+                        <span class="large">{{profitabilityChangeWeek*100 | cfPercentBig}}<span class="small">.{{profitabilityChangeWeek*100 | cfPercentSmall}}%</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- //end cf-item -->
+    <!--&lt;!&ndash; EXTRA &ndash;&gt;-->
+    <!--<div class="col-sm-4 cf-item">-->
+        <!--<header>-->
+            <!--<p><span></span>Profitability (BTC/day per MH/s)</p>-->
+        <!--</header>-->
+        <!--<div class="content2">-->
+            <!--<div class="cf-svmc-sparkline">-->
+                <!--<div class="cf-svmc">-->
+                    <!--<div class="metric">{{profitability2 | number:6}}<span>({{dayHours}}h)</span></div>-->
+                    <!--<div>-->
+                        <!--<span class="change metric-small" ng-class="profitabilityChange<0 ? 'm-red' : 'm-green'">-->
+                            <!--<span ng-class="profitabilityChange<0 ? 'arrow-down' : 'arrow-up'"></span><span class="large">{{profitabilityChange2*100 | cfPercentBig}}<span class="small">.{{profitabilityChange2*100 | cfPercentSmall}}%</span></span>-->
+                        <!--</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="content2">-->
+            <!--<div class="cf-svmc-sparkline">-->
+                <!--<div class="cf-svmc">-->
+                    <!--<div class="metric">{{profitabilityWeek2 | number:6}}<span>({{weekHours/24 | number:0}}d)</span></div>-->
+                    <!--<div class="change metric-small" ng-class="profitabilityChangeWeek<0 ? 'm-red' : 'm-green'">-->
+                        <!--<div ng-class="profitabilityChangeWeek<0 ? 'arrow-down' : 'arrow-up'"></div>-->
+                        <!--<span class="large">{{profitabilityChangeWeek2*100 | cfPercentBig}}<span class="small">.{{profitabilityChangeWeek2*100 | cfPercentSmall}}%</span></span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div> &lt;!&ndash; //end cf-item &ndash;&gt;-->
+    <!--&lt;!&ndash; END EXTRA &ndash;&gt;-->
+    <div class="col-sm-4 cf-item">
+        <header>
+            <p><span></span>Hashrate (MH/s)</p>
+        </header>
+        <div class="content">
+            <div class="cf-svmc-sparkline">
+                <div class="cf-svmc">
+                    <div class="metric">{{hashrate | number:2}}<span>(1h)</span></div>
+                    <!--<div class="change m-green metric-small">-->
+                        <!--<div class="arrow-up"></div>-->
+                        <!--<span class="large">32<span class="small">.45%</span></span>-->
+                    <!--</div>-->
+                </div>
+                <!--<div class="cf-sparkline clearfix">-->
+                    <!--<div cf-sparkline="hashrates" class="sparkline"></div>-->
+                    <!--<div class="sparkline-value">-->
+                        <!--<div class="metric-small">0</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <!--<div cf-gauge="hashrate" class="content cf-gauge" id="cf-gauge-1">-->
+            <!--<div class="val-current">-->
+                <!--<div class="metric" id="cf-gauge-1-m"></div>-->
+            <!--</div>-->
+            <!--<div class="canvas">-->
+                <!--<canvas id="cf-gauge-1-g"></canvas>-->
+            <!--</div>-->
+            <!--<div class="val-min">-->
+                <!--<div class="metric-small"></div>-->
+            <!--</div>-->
+            <!--<div class="val-max">-->
+                <!--<div class="metric-small"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div> <!-- //end cf-item -->
+    <div class="col-sm-4 cf-item">
+        <header>
+            <p><span></span>Total Payout (BTC)</p>
+        </header>
+        <div class="content">
+            <div class="cf-svmc">
+                <div class="metric">{{totalPayments | number:4}}</div>
+                <!--<div class="change m-red metric-small">-->
+                    <!--<div class="arrow-down"></div>-->
+                    <!--<span class="large">32<span class="small">.45%</span></span>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div> <!-- //end cf-item -->
+</div> <!-- //end row -->
+<div class="row">
+    <div class="col-sm-6 cf-item">
+        <header>
+            <p><span></span>Balances (BTC)</p>
+        </header>
+        <div class="content">
+            <div cf-rag="balances" id="cf-rag-1" class="cf-rag"></div>
+        </div>
+    </div> <!-- //end cf-item -->
+    <!--<div class="col-sm-4 cf-item"></div>-->
+    <div class="col-sm-6 cf-item" style="height:189px;">
+        <header>
+            <p><span></span>Twitter Feed</p>
+        </header>
+        <div class="content cf-rss">
+            <div id="cf-rss-1" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div ng-repeat="tweet in tweets | limitTo:3" class="item" ng-class="{active : $first}" >
+                        <blockquote class="twitter-tweet" lang="en"><p>{{tweet.text}} <a href="https://twitter.com/thecoinfu/statuses/{{tweet.id_str}}" target="=_blank">{{tweet.created_at | amDateFormat:'MMM D'}}</a></p><a href="https://twitter.com/{{tweet.user.screen_name}}" target="=_blank">@{{tweet.user.screen_name}}</a></blockquote>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li ng-repeat="tweet in tweets | limitTo:3" data-target="#cf-rss-1" data-slide-to={{$index}} ng-class="{active : $first}"></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div> <!-- //end row -->
+<div class="row">
+    <div class="col-sm-6 cf-item2">
+        <header>
+            <p><span></span>Blocks (BTC est.)</p>
+        </header>
+        <div class="content cf-block">
+            <div ng-repeat="block in blocks">
+                <p class="m-green metric">{{block.coin}} {{block.alt_qty*block.exchange_rate | number:8}}</p>
+                <p>{{block.creation_time | amDateFormat: 'YYYY-MM-DD HH:mm ZZ' }}</p>
+                <p>{{block.block_hash}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 cf-item2">
+        <header>
+            <p><span></span>Miners</p>
+        </header>
+        <div class="content">
+            <div cf-funnel="miners" id="cf-funnel-1" class="cf-funnel"></div>
+        </div>
+    </div>
+</div>

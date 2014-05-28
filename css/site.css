@@ -1,0 +1,169 @@
+/*body > .container {*/
+    /*padding-top: 70px;*/
+/*}*/
+
+/*.navbar .nav>li>a.brand {*/
+    /*padding-left:20px;*/
+    /*margin-left:0*/
+/*}*/
+
+/*.content {*/
+    /*margin-top:50px;*/
+    /*width:100%*/
+/*}*/
+
+/*footer {*/
+    /*position:fixed;*/
+    /*left:0px;*/
+    /*bottom:0px;*/
+    /*height:30px;*/
+    /*width:100%;*/
+    /*background:#ddd;*/
+    /*-webkit-box-shadow:0 8px 6px 6px black;*/
+    /*-moz-box-shadow:0 8px 6px 6px black;*/
+    /*box-shadow:0 8px 6px 6px black*/
+/*}*/
+
+/*footer p {*/
+    /*padding:5px 0 12px 10px*/
+/*}*/
+
+.home {
+    font-size: 18px;
+    color: #f2f2f2;
+}
+
+.home h1, .home dt, .home h4 {
+    color: darkgrey;
+}
+
+.cf-item .content2 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    height: 41%;
+    position: relative;
+}
+
+.cf-funnel{
+    height: 100%;
+    overflow:hidden;
+}
+
+.cf-funnel .cf-figstxts li div a{
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0;
+    line-height: 1;
+    text-align: right;
+    padding-right: 5%;
+    white-space: nowrap;
+}
+
+.cf-rss blockquote p {
+    font-weight: 300;
+    line-height: 1;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+}
+
+.cf-block > div {
+     border-bottom: solid 1px #4f4f4f;
+ }
+
+.cf-block > div > div{
+    display: inline-block;
+}
+
+.cf-rag .cf-txts-txt {
+    text-align: right;
+}
+
+.cf-block div p.metric{
+    font-size: 2em;
+    /*text-align: left;*/
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    /*margin: 0;*/
+    /*line-height: 1;*/
+    padding-top: 1%;
+    /*white-space: nowrap;*/
+}
+
+body.black .cf-item2 header p span {
+    background-color: #4f4f4f;
+}
+
+.metric {
+    font-size: 5em;
+    line-height: 1;
+}
+
+.cf-item2 header {
+    text-transform: uppercase;
+    border-bottom: solid 1px;
+}
+
+.cf-item2 header p span {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-bottom: 2px;
+    margin-right: 5px;
+}
+
+.cf-svmc .metric span {
+    font-size: 0.3em;
+    padding-left: 3px;
+}
+
+.modal-body input{
+    /*display: block;*/
+    width: 100%
+}
+
+.carousel-indicators li, .carousel-indicators .active{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+a {
+    cursor: pointer;
+}
+
+@media (min-width: 992px) {
+    .col-sm-6 .cf-funnel .cf-figstxts li div p.metric {
+        font-size: 2em;
+    }
+}
+
+
+/*.axis path,*/
+/*.axis line {*/
+    /*fill: none;*/
+    /*stroke: #000;*/
+    /*shape-rendering: crispEdges;*/
+/*}*/
+
+/*.x.axis path {*/
+    /*display: none;*/
+/*}*/
+
+/*.line {*/
+    /*fill: none;*/
+    /*stroke: steelblue;*/
+    /*stroke-width: 1.5px;*/
+/*}*/
+
+/* Donations */
+/*.COINWIDGETCOM_CONTAINER > a {*/
+    /*height: 21px !important;*/
+/*}*/
+
+/*@media screen and (max-width: 768px) {*/
+    /*body { padding-top: 0px; }*/
+/*}*/

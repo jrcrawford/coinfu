@@ -1,78 +1,95 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html ng-app="coinfu" ng-controller="coinfuCtrl" >
+<head>
+    <title ng-bind="pageTitle"></title>
+
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Coinfu by jrcrawford</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta name="keywords" content="crypto currency bitcoin pool altcoin">
+    <meta name="description" content="CoinFu">
+    <meta property="fb:app_id" content="APP_ID">
+    <meta property="og:title" content="CoinFu">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://coinfu.io">
+    <meta property="og:image" content="APP_LOGO">
+    <meta property="og:site_name" content="CoinFu - A crypto currency pool.">
+    <meta property="fb:admins" content="Josh Crawford, Shawn Poindexter">
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/jrcrawford/coinfu">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/jrcrawford/coinfu/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/jrcrawford/coinfu/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+    <link href="./img/icons/favicon.ico?v=3" rel="shortcut icon">
+    <link href="../bower_components/dangle/css/dangle.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="/css/site.css">-->
+    <link href="../bower_components/bs/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="./css/controlfrog.css" rel="stylesheet" media="screen">
+    <link href="./css/site.css" rel="stylesheet" media="screen">
 
-    <div class="wrapper">
+</head>
+<body class="black">
 
-      <section>
-        <div id="title">
-          <h1>Coinfu</h1>
-          <p></p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/jrcrawford">jrcrawford</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+<div ng-include src="'common/nav.html'"></div>
 
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<div class="cf-container cf-nav-active"  ng-class="showMaxNav ? 'cf-nav-state-max' : ''">
+    <div ui-view></div>
+</div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<script type="text/javascript" src="../bower_components/jquery/jquery.js"></script>
+<script type="text/javascript" src="../bower_components/moment/moment.js"></script>
+<script type="text/javascript" src="../bower_components/bs/bootstrap.min.js"></script>
+<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="../bower_components/angular-resource/angular-resource.js"></script>
+<script type="text/javascript" src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!--<script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script>-->
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
+<script type="text/javascript" src="./js/chart/Chart.js"></script> <!-- Custom chart.js to limit the # of x axis labels -->
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<script src="./js/easypiechart.js"></script>
+<script src="./js/gauge.js"></script>
+<script src="./js/jquery.sparklines.js"></script>
+<script src="./js/controlfrog-plugins.js"></script>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<!--[if lt IE 9]>
+<script src="./js/respond.min.js"></script>
+<script src="./js/excanvas.min.js"></script>
+<![endif]-->
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<script type="text/javascript" src="../bower_components/angles/angles.js"></script>
+<script type="text/javascript" src="../bower_components/moment/moment.js"></script>
+<script type="text/javascript" src="../bower_components/angular-moment/angular-moment.js"></script>
+<script type="text/javascript" src="../bower_components/d3/d3.js"></script>
+<script type="text/javascript" src="../bower_components/dangle/dist/dangle.min.js"></script>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<script>
+    var themeColour = 'black';
+</script>
+<script src="./js/controlfrog.js"></script>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<!-- App -->
+<script type="text/javascript" src="./app.js"></script>
+<script type="text/javascript" src="./common/directives.js"></script>
+<script type="text/javascript" src="./common/filters.js"></script>
+<script type="text/javascript" src="./common/service.js"></script>
+<script type="text/javascript" src="./common/nav.js"></script>
+<script type="text/javascript" src="./home/home.js"></script>
+<script type="text/javascript" src="./stats/poolstats.js"></script>
+<script type="text/javascript" src="./stats/minerstats.js"></script>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<!--<script src="/socket.io/socket.io.js"></script>-->
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+    ga('create', 'UA-48871200-1', 'coinfu.io');
+</script>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
+<!--Livereload script rendered-->
+<!--<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>-->
 
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+</body>
 </html>
